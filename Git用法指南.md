@@ -81,10 +81,11 @@
 
 #### Git Flow示意图
 
-![Git Flow示意图](../res/img/git-flow.png)
+![Git Flow示意图](img/git-flow.png)
 
 ## 其他命令
 
 1. `git stash`：将当前**工作区和暂存区**的改动保存，回到没有任何改动的提交。
 2. `git stash pop [--index]`：将之前stash保存的数据恢复到**工作区**，如果加上`--index`选项则恢复到**工作区和暂存区**
 3. `git revert [<commit>]`：逆转指定提交，即新增的数据删除，删除的数据新增，然后将逆转后的数据作为一次新的提交
+4. `git rm --cached <file>`：从暂存中清除指定文件
