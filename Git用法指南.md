@@ -22,6 +22,7 @@
 2. `git reset [--mixed] [<commit>]`：回退到指定的提交，并将文件从版本库复制到暂存区
 3. `git reset --soft [<commit>]`：仅回退到指定的提交，文件不做改变
 4. `git reset --hard [<commit>]`：回退到指定提交，并将文件从版本库复制到暂存区和工作区
+5. `git push [-f] <branch-mame>`：将提交push到远端，如果加了-f选项则可以实现将reset后的commit强制push到远端
 
 ## Git中的分支(Branch)
 
@@ -42,6 +43,16 @@
 ### 删除分支
 
 命令：`git branch -d <branch-name>`
+
+### 删除远程分支
+
+先删除本地的索引
+
+命令：`git branch -r -d origin <branch-name>`
+
+在加个冒号表示将空分支push到远端，即删除该分支
+
+命令：`git push origin :<branch-name>`
 
 ### 合并分支
 
